@@ -504,7 +504,7 @@ body {
     main .secao-formulario form {
         display: flex;
         flex-direction: column;
-        width: 50vw;
+        width: 40vw;
     }
 
     main .secao-formulario form input {
