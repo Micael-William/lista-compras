@@ -1,6 +1,7 @@
 ﻿# Lista de Compras
 
 Este é um projeto simples de uma lista de compras interativa, onde é possível adicionar, marcar como concluído e remover itens.
+<br>
 ![print-mobile](https://github.com/user-attachments/assets/6f4bea73-7016-491d-a8f2-461605b20301)
 
 
