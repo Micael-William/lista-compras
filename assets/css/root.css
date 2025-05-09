@@ -1,0 +1,20 @@
+:root {
+    --background-primary: #F4F5FB;
+    --background-secondary: #FFFFFF;
+    --color-brand: #ca3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFFFFF;
+
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+
+    --title: 14px;
+    --paragraph: 16px;
+    --label: 16px;
+    --link: 14px;
+}

@@ -1,0 +1,613 @@
+@import url("./root.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-primary);
+}
+
+@media (max-width: 480px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 20px 10px 20px;
+    }
+
+    main .secao-titulo h1 {
+        display: none;
+    }
+
+    main .secao-formulario .secao-titulo {
+        height: 14vh;
+    }
+
+    main .secao-titulo .container-titulo p,
+    main .secao-titulo .container-titulo p  img {
+        color: var(--color-brand);
+    }
+
+    main .secao-titulo .container-titulo p {
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        margin: 10px;
+        font-size: var(--paragraph);
+        gap: 6px;
+    }
+
+    main .secao-titulo .container-titulo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .secao-titulo .container-titulo h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main .secao-formulario {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    main .secao-formulario form {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+    }
+
+    main .secao-formulario form input {
+        outline: none;
+        border-radius: 9px;
+        border: none;
+        border: 1px solid var(--border-primary);
+        padding: 0.7rem;
+        font-size: var(--title);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main .secao-formulario form button {
+        margin-top: 12px;
+        padding: 0.7rem;
+        border: none;
+        border-radius: 9px;
+        color: var(--always-white);
+        background-color: var(--color-brand);
+    }
+
+    main .secao-formulario .conteudo {
+        margin-top: 50px;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item {
+        list-style-type: none;
+        margin-top: 10px;
+        background-color: var(--background-secondary);
+        padding: 0.7rem;
+        border-radius: 7px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: var(--label);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item span {
+        margin-left: 0.7rem;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .border {
+        background-color: green;
+        transition: 1s ease;
+        color: #fff;
+
+        & .btn-excluir {
+            filter: invert();
+        }
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item img {
+       position: absolute;
+       top: 10px;
+       right: 10px;
+    }
+
+    main .secao-formulario .conteudo .hidde {
+        position: relative;
+        margin-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: var(--paragraph);
+        background-color: var(--color-danger);
+        padding: 0.7rem;
+        border-radius: 7px;
+        color: var(--always-white);
+        display: none;
+    }
+
+    main .secao-formulario .conteudo .block {
+        display: block;
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        position: relative;
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem #legenda,
+    main .secao-formulario .conteudo .hidde .mensagem #fechar {
+        filter: invert();
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem #fechar {
+        position: absolute;
+        top: 0;
+        right: -24%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 800px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 20px 10px 20px;
+    }
+
+    main .secao-titulo h1 {
+        display: none;
+    }
+
+    main .secao-formulario .secao-titulo {
+        height: 14vh;
+    }
+
+    main .secao-titulo .container-titulo p,
+    main .secao-titulo .container-titulo p  img {
+        color: var(--color-brand);
+    }
+
+    main .secao-titulo .container-titulo p {
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        margin: 10px;
+        font-size: var(--paragraph);
+        gap: 6px;
+    }
+
+    main .secao-titulo .container-titulo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .secao-titulo .container-titulo h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main .secao-formulario {
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    main .secao-formulario form {
+        display: flex;
+        flex-direction: column;
+        width:60vw;
+    }
+
+    main .secao-formulario form input {
+        outline: none;
+        border-radius: 9px;
+        border: none;
+        border: 1px solid var(--border-primary);
+        padding: 1rem;
+        --title: 1rem;
+        font-size: var(--title);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main .secao-formulario form button {
+        --title: 1rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: none;
+        border-radius: 9px;
+        color: var(--always-white);
+        background-color: var(--color-brand);
+        font-size: var(--title);
+    }
+
+    main .secao-formulario .conteudo {
+        margin-top: 50px;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item {
+        list-style-type: none;
+        margin-top: 1rem;
+        background-color: var(--background-secondary);
+        padding: 1rem;
+        border-radius: 7px;
+        font-family: Arial, Helvetica, sans-serif;
+        --title: 1rem;
+        font-size: var(--title);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item span {
+        margin-left: 1rem;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .border {
+        background-color: green;
+        transition: 1s ease;
+        color: #fff;
+
+        & .btn-excluir {
+            filter: invert();
+        }
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item img {
+       position: absolute;
+       top: 1rem;
+       right: 1rem;
+    }
+
+    main .secao-formulario .conteudo .hidde {
+        position: relative;
+        margin-top: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: var(--paragraph);
+        background-color: var(--color-danger);
+        padding: 1rem;
+        border-radius: 7px;
+        color: var(--always-white);
+        display: none;
+    }
+
+    main .secao-formulario .conteudo .block {
+        display: block;
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem #legenda,
+    main .secao-formulario .conteudo .hidde .mensagem #fechar {
+        filter: invert();
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem #fechar {
+        position: absolute;
+        top: 0;
+        right: -24%;
+    }
+}
+
+
+@media (min-width: 800px) and (max-width: 1400px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 20px 10px 20px;
+    }
+
+    main .secao-titulo h1 {
+        display: none;
+    }
+
+    main .secao-formulario .secao-titulo {
+        height: 14vh;
+    }
+
+    main .secao-titulo .container-titulo p,
+    main .secao-titulo .container-titulo p  img {
+        color: var(--color-brand);
+    }
+
+    main .secao-titulo .container-titulo p {
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        margin: 1.5rem;
+        font-size: var(--paragraph);
+        gap: 1rem;
+    }
+
+    main .secao-titulo .container-titulo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .secao-titulo .container-titulo h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main .secao-formulario {
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+
+    main .secao-formulario form {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+    }
+
+    main .secao-formulario form input {
+        outline: none;
+        border-radius: 9px;
+        border: none;
+        border: 1px solid var(--border-primary);
+        padding: 1.3rem;
+        --title: 1.3rem;
+        font-size: var(--title);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main .secao-formulario form button {
+        --title: 1.2rem;
+        margin-top: 1rem;
+        padding: 1.3rem;
+        border: none;
+        border-radius: 9px;
+        color: var(--always-white);
+        background-color: var(--color-brand);
+        font-size: var(--title);
+    }
+
+    main .secao-formulario .conteudo {
+        margin-top: 50px;
+        padding: 1.2rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item {
+        list-style-type: none;
+        margin-top: 1.2rem;
+        background-color: var(--background-secondary);
+        padding: 1.3rem;
+        border-radius: 7px;
+        font-family: Arial, Helvetica, sans-serif;
+        --title: 1.3rem;
+        font-size: var(--title);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item span {
+        margin-left: 1.3rem;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .border {
+        background-color: green;
+        transition: 1s ease;
+        color: #fff;
+
+        & .btn-excluir {
+            filter: invert();
+        }
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item img {
+       position: absolute;
+       top: 1.3rem;
+       right: 1.3rem;
+       width: 25px;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item input {
+        width: 25px;
+        height: 25px;
+    }
+
+    main .secao-formulario .conteudo .hidde {
+        --paragraph: 1.3rem;
+        position: relative;
+        margin-top: 2.3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: var(--paragraph);
+        background-color: var(--color-danger);
+        padding: 1.3rem;
+        border-radius: 7px;
+        color: var(--always-white);
+        display: none;
+    }
+
+    main .secao-formulario .conteudo .block {
+        display: block;
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem {
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+        position: relative;
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem #legenda,
+    main .secao-formulario .conteudo .hidde .mensagem #fechar {
+        filter: invert();
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem #fechar {
+        position: absolute;
+        top: 0;
+        right: -24%;
+    }
+}
+
+@media (min-width: 1400px){
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 20px 10px 20px;
+    }
+
+    main .secao-titulo h1 {
+        display: none;
+    }
+
+    main .secao-formulario .secao-titulo {
+        height: 14vh;
+    }
+
+    main .secao-titulo .container-titulo p,
+    main .secao-titulo .container-titulo p  img {
+        color: var(--color-brand);
+    }
+
+    main .secao-titulo .container-titulo p {
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        margin: 1.5rem;
+        font-size: var(--paragraph);
+        gap: 1rem;
+    }
+
+    main .secao-titulo .container-titulo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .secao-titulo .container-titulo h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main .secao-formulario {
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+
+    main .secao-formulario form {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+    }
+
+    main .secao-formulario form input {
+        outline: none;
+        border-radius: 9px;
+        border: none;
+        border: 1px solid var(--border-primary);
+        padding: 1.3rem;
+        --title: 1.3rem;
+        font-size: var(--title);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main .secao-formulario form button {
+        --title: 1.2rem;
+        margin-top: 1rem;
+        padding: 1.3rem;
+        border: none;
+        border-radius: 9px;
+        color: var(--always-white);
+        background-color: var(--color-brand);
+        font-size: var(--title);
+    }
+
+    main .secao-formulario .conteudo {
+        margin-top: 50px;
+        padding: 1.2rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item {
+        list-style-type: none;
+        margin-top: 1.2rem;
+        background-color: var(--background-secondary);
+        padding: 1.3rem;
+        border-radius: 7px;
+        font-family: Arial, Helvetica, sans-serif;
+        --title: 1.3rem;
+        font-size: var(--title);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item span {
+        margin-left: 1.3rem;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .border {
+        background-color: green;
+        transition: 1s ease;
+        color: #fff;
+
+        & .btn-excluir {
+            filter: invert();
+        }
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item img {
+       position: absolute;
+       top: 1.3rem;
+       right: 1.3rem;
+       width: 25px;
+    }
+
+    main .secao-formulario .conteudo .lista-compras .item input {
+        width: 25px;
+        height: 25px;
+    }
+
+    main .secao-formulario .conteudo .hidde {
+        --paragraph: 1.3rem;
+        position: relative;
+        margin-top: 2.3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: var(--paragraph);
+        background-color: var(--color-danger);
+        padding: 1.3rem;
+        border-radius: 7px;
+        color: var(--always-white);
+        display: none;
+    }
+
+    main .secao-formulario .conteudo .block {
+        display: block;
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem {
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+        position: relative;
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem #legenda,
+    main .secao-formulario .conteudo .hidde .mensagem #fechar {
+        filter: invert();
+    }
+
+    main .secao-formulario .conteudo .hidde .mensagem #fechar {
+        position: absolute;
+        top: 0;
+        right: -24%;
+    }
+}

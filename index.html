@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <main>
+        
+        <section class="secao-formulario">
+
+            <section class="secao-titulo">
+                <h1><img src="assets/img/icones/Vector.png" alt="logo titulo">quicklist</h1>
+                <div class="container-titulo">
+                    <p><img width="20" height="20" src="https://img.icons8.com/windows/32/long-arrow-left.png" alt="long-arrow-left"/>Voltar</p>
+                    <h2>Compras da semana</h2>
+                </div>
+            </section>
+
+            <form action="" method="post">
+                <input type="text" name="item" id="item" placeholder="Adicione um novo item">
+                <button type="submit">Adicionar item</button>
+            </form>
+
+            <div class="conteudo">
+                <ul class="lista-compras">
+                    <li class="item">
+                        <input class="check" type="checkbox" name="tarefa" id="">
+                        <span>Pão de forma</span>
+                        <img class="btn-excluir" src="assets/img/icones/Frame-3.png" alt="logo excluir">
+                    </li>
+                    <li class="item">
+                        <input class="check" type="checkbox" name="tarefa" id="">
+                        <span>Café preto</span>
+                        <img class="btn-excluir" src="assets/img/icones/Frame-3.png" alt="logo excluir">
+                    </li>
+                    <li class="item">
+                        <input class="check" type="checkbox" name="tarefa" id="">
+                        <span>Suco de laranja</span>
+                        <img class="btn-excluir" src="assets/img/icones/Frame-3.png" alt="logo excluir">
+                    </li>
+                </ul>
+                <div class="hidde">
+                    <div class="mensagem">
+                        <img id="legenda" src="assets/img/icones/warning-circle-filled.png" alt="logo mensagem">
+                        <p>O item foi removido da lista</p>
+                        <img id="fechar" src="assets/img/icones/delete-small.png" alt="logo fechar">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
